@@ -1,0 +1,206 @@
+/* ==========================================
+   MCCORNEJO — LARAVEL PORTFOLIO
+   PREMIUM DARK DEVELOPER THEME
+========================================== */
+
+:root {
+    --bg: #050b18;
+    --bg-secondary: #091426;
+    --surface: #101e32;
+    --blue: #38bdf8;
+    --cyan: #67e8f9;
+    --text: #e2e8f0;
+    --muted: #94a3b8;
+    --border: rgba(103, 232, 249, 0.15);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 90px;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.7;
+}
+
+/* NAVIGATION */
+
+.site-header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: rgba(5, 11, 24, 0.92);
+    border-bottom: 1px solid var(--border);
+}
+
+.navbar {
+    width: min(1150px, 90%);
+    min-height: 78px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 25px;
+}
+
+.brand {
+    color: #fff;
+    font-size: 29px;
+    font-weight: 800;
+    letter-spacing: 2px;
+    text-decoration: none;
+}
+
+.brand span {
+    color: var(--cyan);
+}
+
+.nav-links,
+.nav-socials {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+}
+
+.nav-links a,
+.nav-socials a {
+    color: var(--muted);
+    text-decoration: none;
+    font-size: 14px;
+    transition: 0.3s ease;
+}
+
+.nav-links a:hover,
+.nav-socials a:hover {
+    color: var(--cyan);
+}
+
+/* HERO */
+
+.hero {
+    width: min(1150px, 90%);
+    min-height: 78vh;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 100px 0;
+}
+
+.hero > p:first-child {
+    color: var(--cyan);
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 4px;
+    margin-bottom: 20px;
+}
+
+.hero h1 {
+    font-size: clamp(40px, 7vw, 76px);
+    line-height: 1.15;
+    margin-bottom: 15px;
+    color: #fff;
+}
+
+.hero h1 span {
+    color: var(--cyan);
+    text-shadow: 0 0 30px rgba(56, 189, 248, 0.2);
+}
+
+.hero h2 {
+    font-size: clamp(20px, 3vw, 30px);
+    color: var(--blue);
+    margin-bottom: 20px;
+}
+
+.hero > p:not(:first-child) {
+    max-width: 650px;
+    color: var(--muted);
+    font-size: 16px;
+    margin-bottom: 30px;
+}
+
+/* HERO BUTTONS */
+
+.hero a {
+    display: inline-block;
+    text-decoration: none;
+    color: var(--cyan);
+    border: 1px solid var(--cyan);
+    border-radius: 7px;
+    padding: 12px 22px;
+    margin-right: 12px;
+    margin-bottom: 10px;
+    transition: 0.3s ease;
+}
+
+.hero a:hover {
+    background: var(--cyan);
+    color: var(--bg);
+    box-shadow: 0 0 22px rgba(103, 232, 249, 0.25);
+}
+
+/* FOOTER */
+
+.site-footer {
+    text-align: center;
+    padding: 25px;
+    background: var(--bg-secondary);
+    border-top: 1px solid var(--border);
+    color: var(--muted);
+    font-size: 13px;
+}
+
+/* MOBILE */
+
+@media (max-width: 768px) {
+
+    .navbar {
+        min-height: 70px;
+        flex-wrap: wrap;
+        padding: 15px 0;
+        gap: 12px;
+    }
+
+    .nav-links {
+        order: 3;
+        width: 100%;
+        justify-content: space-between;
+        gap: 8px;
+    }
+
+    .nav-links a {
+        font-size: 12px;
+    }
+
+    .nav-socials {
+        gap: 12px;
+    }
+
+    .nav-socials a {
+        font-size: 12px;
+    }
+
+    .hero {
+        min-height: 75vh;
+        padding: 75px 0;
+    }
+
+    .hero h1 {
+        font-size: clamp(38px, 10vw, 55px);
+    }
+
+    .hero > p:not(:first-child) {
+        font-size: 14px;
+    }
+}
